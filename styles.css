@@ -251,7 +251,7 @@ button { font: inherit; color: inherit; }
 /* Framer-style arrow cursor (mouse devices only) */
 .pointer { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; display: none; filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); }
 .pointer__tag { position: absolute; left: 22px; top: 24px; background: var(--red); color: #fff; border: 2px solid #fff; font-weight: 800; font-size: 13px; padding: 3px 10px; border-radius: 12px 12px 12px 4px; white-space: nowrap; transition: transform .25s var(--ease), background .2s; transform-origin: 0 0; }
-.pointer.is-action .pointer__tag { background: var(--ink); transform: scale(1.12); }
+.pointer__tag[hidden] { display: none; }
 @media (hover: hover) and (pointer: fine) {
   .has-pointer, .has-pointer * { cursor: none !important; }
   .has-pointer input, .has-pointer textarea { cursor: text !important; }

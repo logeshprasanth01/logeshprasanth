@@ -121,17 +121,10 @@
     let tx = -100, ty = -100, x = -100, y = -100;
     addEventListener('mousemove', (e) => {
       tx = e.clientX; ty = e.clientY;
-      const el = e.target.closest('.card, [data-open-reel], #reelPlay, a, button, input, textarea');
-      let label = 'Logesh';
-      if (el) {
-        if (el.matches('.card')) label = 'Play video';
-        else if (el.matches('[data-open-reel], #reelPlay')) label = 'Play showreel';
-        else if (el.matches('input, textarea')) label = 'Type here';
-        else if (el.matches('a')) label = el.getAttribute('href').startsWith('#') ? 'Go' : 'Open';
-        else label = 'Click';
-      }
+      const el = e.target.closest('.card, [data-open-reel], #reelPlay');
+      const label = !el ? '' : el.matches('.card') ? 'Play video' : 'Play showreel';
       if (tag.textContent !== label) tag.textContent = label;
-      ptr.classList.toggle('is-action', !!el);
+      tag.hidden = !label;
     });
     document.addEventListener('mouseleave', () => { tx = ty = -100; });
     const k = reduce ? 1 : 0.28;
