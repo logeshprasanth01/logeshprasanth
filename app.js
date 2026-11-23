@@ -114,6 +114,30 @@
   viewer.addEventListener('click', (e) => { if (e.target === viewer) close(); });
   viewer.addEventListener('close', () => { stage.innerHTML = ''; });
 
+  /* Framer-style arrow cursor: eases toward the mouse, tag says what a click will do */
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const ptr = document.getElementById('pointer'), tag = document.getElementById('pointerTag');
+    document.documentElement.classList.add('has-pointer');
+    let tx = -100, ty = -100, x = -100, y = -100;
+    addEventListener('mousemove', (e) => {
+      tx = e.clientX; ty = e.clientY;
+      const el = e.target.closest('.card, [data-open-reel], #reelPlay, a, button, input, textarea');
+      let label = 'Logesh';
+      if (el) {
+        if (el.matches('.card')) label = 'Play video';
+        else if (el.matches('[data-open-reel], #reelPlay')) label = 'Play showreel';
+        else if (el.matches('input, textarea')) label = 'Type here';
+        else if (el.matches('a')) label = el.getAttribute('href').startsWith('#') ? 'Go' : 'Open';
+        else label = 'Click';
+      }
+      if (tag.textContent !== label) tag.textContent = label;
+      ptr.classList.toggle('is-action', !!el);
+    });
+    document.addEventListener('mouseleave', () => { tx = ty = -100; });
+    const k = reduce ? 1 : 0.28;
+    (function loop() { x += (tx - x) * k; y += (ty - y) * k; ptr.style.transform = `translate(${x - 5}px, ${y - 4}px)`; requestAnimationFrame(loop); })();
+  }
+
   /* Sticky-note form: compose an email */
   document.getElementById('note').addEventListener('submit', (e) => {
     e.preventDefault();
