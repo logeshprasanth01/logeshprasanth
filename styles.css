@@ -80,7 +80,8 @@ button { font: inherit; color: inherit; }
   background: var(--yellow); color: var(--ink); padding: 10px 14px 9px; text-align: center; font-weight: 800; font-size: 12px; line-height: 1.15;
   border: 5px dotted var(--paper); outline: 2px solid var(--yellow); box-shadow: var(--shadow); display: none;
 }
-.stamp__big { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 30px; line-height: 1; }
+.stamp__big { display: block; font-family: "Archivo", sans-serif; font-weight: 900; font-stretch: 125%; font-size: 30px; line-height: 1; letter-spacing: -.01em; text-transform: uppercase; }
+.stamp__sub { display: block; margin-top: 3px; font-family: "Caveat", cursive; font-weight: 700; font-size: 21px; line-height: 1; }
 .bubble {
   position: absolute; right: calc(var(--pad) + 2%); top: clamp(4px, 2vw, 24px); transform: rotate(6deg);
   background: var(--ink); color: var(--paper); font-family: "Caveat", cursive; font-weight: 600; font-size: 22px; line-height: 1.05;
