@@ -368,5 +368,60 @@ window.PROJECTS = [
   "src": "/media/study-hacks.mp4",
   "preview": "/media/study-hacks-preview.mp4",
   "poster": "/media/study-hacks.jpg"
+ },
+ {
+  "id": "tamasha-cuisine",
+  "cat": "brand",
+  "title": "Curated cuisine reel",
+  "client": "Tamasha Bar + Indian Kitchen",
+  "duration": 16.9,
+  "vertical": true,
+  "src": "/media/tamasha-cuisine.mp4",
+  "preview": "/media/tamasha-cuisine-preview.mp4",
+  "poster": "/media/tamasha-cuisine.jpg"
+ },
+ {
+  "id": "reina-de-mexico",
+  "cat": "brand",
+  "title": "Restaurant ambience and food reel",
+  "client": "Reina De Mexico",
+  "duration": 25.6,
+  "vertical": true,
+  "src": "/media/reina-de-mexico.mp4",
+  "preview": "/media/reina-de-mexico-preview.mp4",
+  "poster": "/media/reina-de-mexico.jpg"
+ },
+ {
+  "id": "global-freelancers",
+  "cat": "creator",
+  "title": "Global Freelancers Festival 2025 promo",
+  "client": "Global Freelancers Festival",
+  "duration": 32.8,
+  "vertical": true,
+  "src": "/media/global-freelancers.mp4",
+  "preview": "/media/global-freelancers-preview.mp4",
+  "poster": "/media/global-freelancers.jpg"
+ },
+ {
+  "id": "pepa-what-we-do",
+  "cat": "creator",
+  "title": "What we do: agency intro",
+  "client": "Pepa",
+  "duration": 37.0,
+  "vertical": true,
+  "src": "/media/pepa-what-we-do.mp4",
+  "preview": "/media/pepa-what-we-do-preview.mp4",
+  "poster": "/media/pepa-what-we-do.jpg"
+ },
+ {
+  "id": "michelle-obama-marriage",
+  "cat": "creator",
+  "title": "How Michelle Obama keeps a 32-year marriage",
+  "client": "",
+  "duration": 40.1,
+  "vertical": true,
+  "src": "/media/michelle-obama-marriage.mp4",
+  "preview": "/media/michelle-obama-marriage-preview.mp4",
+  "poster": "/media/michelle-obama-marriage.jpg"
  }
 ];
